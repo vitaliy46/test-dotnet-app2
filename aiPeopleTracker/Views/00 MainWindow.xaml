@@ -1,0 +1,67 @@
+﻿<Window x:Class="aiPeopleTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:resources="http://ainerics.schemas.com/resources"
+        xmlns:mnu="clr-namespace:aiPeopleTracker.Wpf.Controls.MainMenu;assembly=aiPeopleTracker.Wpf.Controls"
+        xmlns:stb="clr-namespace:aiPeopleTracker.Wpf.Controls.WatermarkSearchTextbox;assembly=aiPeopleTracker.Wpf.Controls"
+        xmlns:ctrls="clr-namespace:aiPeopleTracker.Wpf.Controls;assembly=aiPeopleTracker.Wpf.Controls"
+        xmlns:local="clr-namespace:aiPeopleTracker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1600" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" BorderThickness="0">
+    <!-- WindowState="Maximized" -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <x:Static Member="resources:ExportResourcesDictionary.Instance"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Background="{StaticResource GrayBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300px"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="{StaticResource Logo}" Grid.Row="0" Grid.Column="0" Margin="20 5 0 0" Width="24" Height="24"/>
+
+            <mnu:MainMenu Grid.Row="0" Grid.Column="2" Name="mnuMain" Selected="MainMenu_Selected">
+                <mnu:MainMenu.Items>
+                    <mnu:MainMenuItem Tag="miMain" Title="Главная" Width="150px" FontSize="11pt" Loaded="MainMenuItem_Loaded"/>
+                    <mnu:MainMenuItem Tag="miPlans" Title="Планы" Width="150px" FontSize="11pt"/>
+                    <mnu:MainMenuItem Tag="miPeople" Title="Люди" Width="150px" FontSize="11pt"/>
+                    <mnu:MainMenuItem Tag="miSettings" Title="Настройки" Width="150px" FontSize="11pt"/>
+                </mnu:MainMenu.Items>
+            </mnu:MainMenu>
+
+            <stb:WatermarkSearchTextbox Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" Margin="0 5 0 0" SearchText="WatermarkSearchTextbox_SearchText"/>
+
+            <Button x:Name="btnClose" Grid.Row="0" Grid.Column="5" Cursor="Hand" Width="29" Height="29" 
+                    VerticalAlignment="Center" Margin="20 12 20 8"
+                    Click="btnClose_Click">
+                <Image Source="{StaticResource Close}" Width="16" Height="16"/>
+            </Button>
+        </Grid>
+
+        <DockPanel Name="viewContainer" Grid.Row="1" Grid.Column="0" LastChildFill="True">
+            <!-- текущее представление -->
+        </DockPanel>
+    </Grid>
+</Window>

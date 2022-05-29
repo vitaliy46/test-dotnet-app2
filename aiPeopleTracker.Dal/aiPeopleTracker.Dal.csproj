@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E4222BA-4801-4B13-BFEF-CE3378061E30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>aiPeopleTracker.Dal</RootNamespace>
+    <AssemblyName>aiPeopleTracker.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AiPeopleContext.cs" />
+    <Compile Include="EfConfigurations\CameraMap.cs" />
+    <Compile Include="EfConfigurations\CameraSettingsMap.cs" />
+    <Compile Include="EfConfigurations\FloorPlanMap.cs" />
+    <Compile Include="EfConfigurations\LayoutTemplateMap.cs" />
+    <Compile Include="EfConfigurations\LayoutTemplateCameraLinkMap.cs" />
+    <Compile Include="EfConfigurations\PersonTagMap.cs" />
+    <Compile Include="EfConfigurations\PersonMap.cs" />
+    <Compile Include="EfConfigurations\_BaseEntityMap.cs" />
+    <Compile Include="Migrations\201907280725169_Initial.cs" />
+    <Compile Include="Migrations\201907280725169_Initial.Designer.cs">
+      <DependentUpon>201907280725169_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\PersonRepository.cs" />
+    <Compile Include="Repositories\PersonTagRepository.cs" />
+    <Compile Include="Repositories\LayoutTemplateRepository.cs" />
+    <Compile Include="Repositories\LayoutTemplateCameraLinkRepository.cs" />
+    <Compile Include="Repositories\FloorPlanRepository.cs" />
+    <Compile Include="Repositories\CameraSettingsRepository.cs" />
+    <Compile Include="Repositories\_RepositoryBase.cs" />
+    <Compile Include="Repositories\CameraRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aiPeopleTracker.Dal.Api\aiPeopleTracker.Dal.Api.csproj">
+      <Project>{a8ab20a5-00ef-4b25-9d9f-930a52ce2d00}</Project>
+      <Name>aiPeopleTracker.Dal.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907280725169_Initial.resx">
+      <DependentUpon>201907280725169_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

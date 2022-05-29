@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="aiPeopleTracker.Wpf.Controls.WatermarkSearchTextbox.WatermarkSearchTextbox"
+             x:Name="ctrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:resources="http://ainerics.schemas.com/resources"
+             xmlns:local="clr-namespace:aiPeopleTracker.Wpf.Controls.WatermarkSearchTextbox"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <x:Static Member="resources:ExportResourcesDictionary.Instance"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <local:TextInputToVisibilityConverter x:Key="TextInputToVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="tbWatermark" Padding="5 0 0 0" Text="{Binding Watermark}" Background="White" Foreground="Gray" VerticalAlignment="Center">
+            <TextBlock.Visibility>
+                <MultiBinding Converter="{StaticResource TextInputToVisibilityConverter}">
+                    <Binding ElementName="txtSearch" Path="Text.IsEmpty" />
+                    <Binding ElementName="txtSearch" Path="IsFocused" />
+                </MultiBinding>
+            </TextBlock.Visibility>
+        </TextBlock>
+
+        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Name="txtSearch" FontSize="20px" KeyDown="txtSearch_KeyDown">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=tbWatermark, Path=Visibility}" Value="Collapsed">
+                            <Setter Property="Background" Value="White"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <Border Grid.Row="0" Grid.Column="1" Cursor="Hand" BorderThickness="0" Background="Transparent" 
+                DockPanel.Dock="Right" MouseDown="Image_MouseLeftButtonDown">
+            <Border.Style>
+                <Style>
+                    <Setter Property="Image.Margin" Value="0 0 5 0"/>
+                    <Style.Triggers>
+                        <Trigger Property="Border.IsMouseOver" Value="True">
+                            <Setter Property="Image.Margin" Value="2 2 3 0"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <Image Source="{StaticResource Find}" Width="16px" Height="16px"/>
+        </Border>
+    </Grid>
+</UserControl>

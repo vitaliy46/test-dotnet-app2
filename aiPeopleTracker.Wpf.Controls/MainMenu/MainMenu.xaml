@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="aiPeopleTracker.Wpf.Controls.MainMenu.MainMenu"
+             x:Name="ctrlMainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:aiPeopleTracker.Wpf.Controls.MainMenu"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="400">
+    <ItemsControl x:Name="ctrl" ItemsSource="{Binding ElementName=ctrlMainMenu, Path=Items}">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <local:MainMenuItem/>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+    </ItemsControl>
+</UserControl>

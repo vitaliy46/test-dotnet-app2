@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9059976-5129-4ACE-94B9-C58FB372C0D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>aiPeopleTracker.Business</RootNamespace>
+    <AssemblyName>aiPeopleTracker.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.5\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=4.1.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.10.3\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.10.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.10.3\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Multitimeline.cs" />
+    <Compile Include="Data\Tracker.cs" />
+    <Compile Include="Data\VideoClip.cs" />
+    <Compile Include="Services\BusinessLogic\AnaliticService.cs" />
+    <Compile Include="Services\BusinessLogic\FileService.cs" />
+    <Compile Include="Services\BusinessLogic\VideoStreamAppService.cs" />
+    <Compile Include="Services\BusinessLogic\MultitimelineBuilder.cs" />
+    <Compile Include="Services\Crud\FloorPlanCrudService.cs" />
+    <Compile Include="Services\Crud\LayoutTemplateCameraLinkCrudService.cs" />
+    <Compile Include="Services\Crud\PersonCrudService.cs" />
+    <Compile Include="Services\Crud\PersonTagCrudService.cs" />
+    <Compile Include="Services\Crud\CameraSettingsCrudService.cs" />
+    <Compile Include="Services\Crud\CameraCrudService.cs" />
+    <Compile Include="Services\Crud\_CrudServiceBase.cs" />
+    <Compile Include="Services\BusinessLogic\CameraAppService.cs" />
+    <Compile Include="Collections\CollectionExtensions.cs" />
+    <Compile Include="Helpers\EnumsHelper.cs" />
+    <Compile Include="Services\Crud\LayoutTemplateCrudService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aiPeopleTracker.Business.Api\aiPeopleTracker.Business.Api.csproj">
+      <Project>{fe49cdcd-3d27-4047-976b-ab0282d93478}</Project>
+      <Name>aiPeopleTracker.Business.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\aiPeopleTracker.Core\aiPeopleTracker.Core.csproj">
+      <Project>{25e8be54-37d9-4544-8b1c-7022764221d0}</Project>
+      <Name>aiPeopleTracker.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\aiPeopleTracker.Dal.Api\aiPeopleTracker.Dal.Api.csproj">
+      <Project>{a8ab20a5-00ef-4b25-9d9f-930a52ce2d00}</Project>
+      <Name>aiPeopleTracker.Dal.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

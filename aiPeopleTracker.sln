@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker", "aiPeopleTracker\aiPeopleTracker.csproj", "{D7A3FD1A-D6E4-45E5-93BD-AE50183688D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{34B4F98B-6C37-460E-920B-F647C3630B69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Wpf.Resources", "aiPeopleTracker.Wpf.Resources\aiPeopleTracker.Wpf.Resources.csproj", "{A0029E3F-F83D-4A49-BAD2-9858F6E7A840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Wpf.Controls", "aiPeopleTracker.Wpf.Controls\aiPeopleTracker.Wpf.Controls.csproj", "{0EA531CC-2C93-4079-998F-A61FB2CFF11A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{A6E95372-9F4E-4BE1-BA3D-1959B768B124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Dal", "aiPeopleTracker.Dal\aiPeopleTracker.Dal.csproj", "{3E4222BA-4801-4B13-BFEF-CE3378061E30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Business.Api", "aiPeopleTracker.Business.Api\aiPeopleTracker.Business.Api.csproj", "{FE49CDCD-3D27-4047-976B-AB0282D93478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Business", "aiPeopleTracker.Business\aiPeopleTracker.Business.csproj", "{E9059976-5129-4ACE-94B9-C58FB372C0D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Dal.Api", "aiPeopleTracker.Dal.Api\aiPeopleTracker.Dal.Api.csproj", "{A8AB20A5-00EF-4B25-9D9F-930A52CE2D00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal", "Dal", "{A878848C-DF67-4F50-88C6-CDACB364A877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Core", "aiPeopleTracker.Core\aiPeopleTracker.Core.csproj", "{25E8BE54-37D9-4544-8B1C-7022764221D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.UnitTests", "aiPeopleTracker.UnitTests\aiPeopleTracker.UnitTests.csproj", "{00D74BEB-8B46-40A0-B010-6D54E3520CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Wpf.Components", "aiPeopleTracker.WpfComponents\aiPeopleTracker.Wpf.Components.csproj", "{E83586B7-0785-48F7-8631-BFDF781AC6DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiPeopleTracker.Wpf.Api", "aiPeopleTracker.Wpf.Api\aiPeopleTracker.Wpf.Api.csproj", "{7795E58E-2612-4A88-98AD-9E7F396D6A69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A3FD1A-D6E4-45E5-93BD-AE50183688D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A3FD1A-D6E4-45E5-93BD-AE50183688D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A3FD1A-D6E4-45E5-93BD-AE50183688D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A3FD1A-D6E4-45E5-93BD-AE50183688D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0029E3F-F83D-4A49-BAD2-9858F6E7A840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0029E3F-F83D-4A49-BAD2-9858F6E7A840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0029E3F-F83D-4A49-BAD2-9858F6E7A840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0029E3F-F83D-4A49-BAD2-9858F6E7A840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EA531CC-2C93-4079-998F-A61FB2CFF11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA531CC-2C93-4079-998F-A61FB2CFF11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA531CC-2C93-4079-998F-A61FB2CFF11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA531CC-2C93-4079-998F-A61FB2CFF11A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E4222BA-4801-4B13-BFEF-CE3378061E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E4222BA-4801-4B13-BFEF-CE3378061E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E4222BA-4801-4B13-BFEF-CE3378061E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E4222BA-4801-4B13-BFEF-CE3378061E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE49CDCD-3D27-4047-976B-AB0282D93478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE49CDCD-3D27-4047-976B-AB0282D93478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE49CDCD-3D27-4047-976B-AB0282D93478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE49CDCD-3D27-4047-976B-AB0282D93478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9059976-5129-4ACE-94B9-C58FB372C0D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9059976-5129-4ACE-94B9-C58FB372C0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9059976-5129-4ACE-94B9-C58FB372C0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9059976-5129-4ACE-94B9-C58FB372C0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AB20A5-00EF-4B25-9D9F-930A52CE2D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AB20A5-00EF-4B25-9D9F-930A52CE2D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AB20A5-00EF-4B25-9D9F-930A52CE2D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AB20A5-00EF-4B25-9D9F-930A52CE2D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E8BE54-37D9-4544-8B1C-7022764221D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E8BE54-37D9-4544-8B1C-7022764221D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E8BE54-37D9-4544-8B1C-7022764221D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E8BE54-37D9-4544-8B1C-7022764221D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00D74BEB-8B46-40A0-B010-6D54E3520CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00D74BEB-8B46-40A0-B010-6D54E3520CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00D74BEB-8B46-40A0-B010-6D54E3520CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00D74BEB-8B46-40A0-B010-6D54E3520CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E83586B7-0785-48F7-8631-BFDF781AC6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83586B7-0785-48F7-8631-BFDF781AC6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83586B7-0785-48F7-8631-BFDF781AC6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83586B7-0785-48F7-8631-BFDF781AC6DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7795E58E-2612-4A88-98AD-9E7F396D6A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7795E58E-2612-4A88-98AD-9E7F396D6A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7795E58E-2612-4A88-98AD-9E7F396D6A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7795E58E-2612-4A88-98AD-9E7F396D6A69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0029E3F-F83D-4A49-BAD2-9858F6E7A840} = {34B4F98B-6C37-460E-920B-F647C3630B69}
+		{0EA531CC-2C93-4079-998F-A61FB2CFF11A} = {34B4F98B-6C37-460E-920B-F647C3630B69}
+		{3E4222BA-4801-4B13-BFEF-CE3378061E30} = {A878848C-DF67-4F50-88C6-CDACB364A877}
+		{FE49CDCD-3D27-4047-976B-AB0282D93478} = {A6E95372-9F4E-4BE1-BA3D-1959B768B124}
+		{E9059976-5129-4ACE-94B9-C58FB372C0D0} = {A6E95372-9F4E-4BE1-BA3D-1959B768B124}
+		{A8AB20A5-00EF-4B25-9D9F-930A52CE2D00} = {A878848C-DF67-4F50-88C6-CDACB364A877}
+		{E83586B7-0785-48F7-8631-BFDF781AC6DE} = {34B4F98B-6C37-460E-920B-F647C3630B69}
+		{7795E58E-2612-4A88-98AD-9E7F396D6A69} = {34B4F98B-6C37-460E-920B-F647C3630B69}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75B6AE22-1B55-4D1C-A3D3-ED7BAC2CD3FF}
+	EndGlobalSection
+EndGlobal

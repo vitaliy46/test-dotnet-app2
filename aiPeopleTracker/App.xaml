@@ -1,0 +1,14 @@
+﻿<Application x:Class="aiPeopleTracker.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:res="clr-namespace:aiPeopleTracker.Wpf.Resources;assembly=aiPeopleTracker.Wpf.Resources"
+             xmlns:local="clr-namespace:aiPeopleTracker">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/aiPeopleTracker.Wpf.Resources;component/ResourcesDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!-- other resources go here -->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
